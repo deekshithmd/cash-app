@@ -1,8 +1,12 @@
+// Library imports
 import React from "react";
 import styled from "styled-components";
+import { NavItems } from "./NavItems";
+
+// Image imports
 import Logo from "../../assets/logo.svg";
 import Eye from "../../assets/eye button.svg";
-import { NavItems } from "./NavItems";
+
 
 export const Header = () => {
   return (

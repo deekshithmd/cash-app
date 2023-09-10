@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+// Library imports
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
+import { useClickAway } from "react-use";
+
+// Image imports
 import Menu from "../../assets/menu.svg";
 
 export const NavItems = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navRef = useRef(null);
   const navList = [
     {
       id: "1",
@@ -51,6 +56,10 @@ export const NavItems = () => {
       link: "/",
     },
   ];
+
+  // To create menu list on clicking outside
+  useClickAway(navRef, () => setShowMenu(false));
+
   return (
     <>
       <MenuIcon
@@ -60,7 +69,7 @@ export const NavItems = () => {
         alt="menu"
         onClick={() => setShowMenu(!showMenu)}
       />
-      <NavContainer show={showMenu}>
+      <NavContainer show={showMenu} ref={navRef}>
         {navList?.map((item) => {
           return (
             <NavItem href={item?.link} target="_blank" key={item?.id}>

@@ -1,5 +1,8 @@
+// Library imports
 import React from "react";
 import styled from "styled-components";
+
+// Component imports
 import { FirstRow } from "./FirstRow";
 import { BottomRow } from "./BottomRow";
 import { MainRow } from "./MainRow";

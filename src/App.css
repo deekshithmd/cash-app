@@ -4,7 +4,7 @@
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  height: auto;
+  height: max-content;
   min-height: 100vh;
 }
 

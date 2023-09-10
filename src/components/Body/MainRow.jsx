@@ -1,5 +1,8 @@
+// Library imports
 import React from "react";
 import styled from "styled-components";
+
+// Image imports
 import Mobile from "../../assets/intro-phone 1.svg";
 
 export const MainRow = () => {

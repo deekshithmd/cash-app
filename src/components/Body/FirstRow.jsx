@@ -1,5 +1,8 @@
+// Library imports
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// Image imports
 import Cube1 from "../../assets/intro-cube 1.svg";
 import Stairs from "../../assets/intro-stairs 1.svg";
 
@@ -23,9 +26,18 @@ const RowContainer = styled.div`
   }
 `;
 
+const ImageAnimation = keyframes`
+0% {transform:scale(1.5);}
+`;
+
 const CubeImage = styled.img`
   height: 74px;
   width: 74px;
+  animation-name: ${ImageAnimation};
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
   @media (max-width: 480px) {
     width: 60px;
     height: 60px;
@@ -35,6 +47,11 @@ const CubeImage = styled.img`
 const StairImage = styled.img`
   height: 260px;
   width: 200px;
+  animation-name: ${ImageAnimation};
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
   @media (max-width: 480px) {
     width: 150px;
     height: 190px;

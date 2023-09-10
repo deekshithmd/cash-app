@@ -1,5 +1,8 @@
+// Library imports
 import React from "react";
 import styled, { keyframes } from "styled-components";
+
+// Image imports
 import Playstore from "../../assets/playstore.svg";
 import Appstore from "../../assets/appstore.svg";
 import Down from "../../assets/down.svg";
@@ -17,13 +20,13 @@ export const Footer = () => {
       <LeftContainer>
         <ButtonContainer>
           <Button>
-            <Image src={Appstore} alt="appstore" />
+            <Image src={Appstore} alt="appstore" title="Apple Logo" />
             <Link href="https://www.apple.com/in/app-store/" target="_blank">
               App Store
             </Link>
           </Button>
           <Button>
-            <Image src={Playstore} alt="playstore" />
+            <Image src={Playstore} alt="playstore" title="Playstore Logo" />
             <Link href="https://play.google.com/store/" target="_blank">
               Play Store
             </Link>
@@ -169,23 +172,25 @@ const Image = styled.img`
   }
 `;
 
-const MoreAnimation = keyframes`
+const ImageAnimation = keyframes`
 0% {transform:translateY(0);}
 100% {transform:translateY(10px);}
 `;
 
 const More = styled(Image)`
-  animation-name: ${MoreAnimation};
+  position: fixed;
+  bottom: 20px;
+  animation-name: ${ImageAnimation};
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
+  animation-direction: alternate;
   &:hover {
     padding: 10px;
     border-radius: 100%;
     background: #212121;
   }
   @media (max-width: 820px) {
-    position: fixed;
     top: 92vh;
     right: 20px;
   }
