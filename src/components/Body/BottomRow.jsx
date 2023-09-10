@@ -39,10 +39,13 @@ const ImageAnimation = keyframes`
 
 const Image = styled.img`
   animation-name: ${ImageAnimation};
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
   animation-direction: alternate;
+  @media (max-width: 820px) {
+    animation: none;
+  }
   @media (max-width: 480px) {
     width: 170px;
     height: 170px;

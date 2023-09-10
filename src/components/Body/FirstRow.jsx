@@ -34,7 +34,7 @@ const CubeImage = styled.img`
   height: 74px;
   width: 74px;
   animation-name: ${ImageAnimation};
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
   animation-direction: alternate;
@@ -52,6 +52,9 @@ const StairImage = styled.img`
   animation-iteration-count: infinite;
   animation-timing-function: ease;
   animation-direction: alternate;
+  @media (max-width: 820px) {
+    animation: none;
+  }
   @media (max-width: 480px) {
     width: 150px;
     height: 190px;
